@@ -5,7 +5,13 @@ class Solution {
 
         while (i < j) {
  
-            int area = (j-i) * (Math.min(height[i], height[j])) ; 
+            int area = 0; 
+            if (height[i] < height[j]) {
+                area = (j-i) * (height[i]) ;
+            } else { 
+                area = (j-i) * (height[j]) ;
+            }
+             
 
             if (maxArea < area) maxArea = area; 
 
