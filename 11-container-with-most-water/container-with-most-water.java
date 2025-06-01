@@ -4,14 +4,8 @@ class Solution {
         int maxArea = 0, i = 0, j = height.length - 1; 
 
         while (i < j) {
- 
-            int area = 0; 
-            if (height[i] < height[j]) {
-                area = (j-i) * (height[i]) ;
-            } else { 
-                area = (j-i) * (height[j]) ;
-            }
-             
+            
+            int area = (j-i) * (Math.min(height[i], height[j])) ; 
 
             if (maxArea < area) maxArea = area; 
 
